@@ -3,17 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="src/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="src/styles.css">
 	<title>Juego</title>
 </head>
 <body>
 	<h1 class="title">Juego Memoria</h1>
-	<div class="container">
-		<div class="color_1 u-card"></div>
-		<div class="color_2 u-card"></div>
-		<div class="color_3 u-card"></div>
-		<div class="color_4 u-card"></div>
+	<div class="container" id="container">
+		<div class="color1 u-card" id="color1"></div>
+		<div class="color2 u-card" id="color2"></div>
+		<div class="color3 u-card" id="color3"></div>
+		<div class="color4 u-card" id="color4"></div>
 	</div>
+	<p class="btn">
+		<a href="#" id="btn">Play</a>
+	</p>
+	<script src="src/app.js"></script>
 </body>
 </html>

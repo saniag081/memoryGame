@@ -2,6 +2,7 @@ body,
 html{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
+	padding: .3rem .5rem;
 }
 
 *{
@@ -13,33 +14,64 @@ html{
 	height: 150px;
 }
 
+.hidden{
+	display: none;
+}
+
+.active{
+	box-shadow: 2px 5px 24px #000;
+	border: 3px solid #fff;
+}
+
 .title{
 	text-align: center;
+	margin: 0;
+	margin-bottom: 1rem;
 }
 
 .container{
-	max-width: 400px;
+	max-width: 346px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-radius: 50px;
+	padding: 1rem 1rem;
+	border: 2px solid;
 }
 
-.color_1{
+.btn{
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.btn a{
+	background-color: #000;
+	color: #fff;
+	padding: .5rem 1rem;
+	border-radius: 8px;
+	text-decoration: none;
+}
+
+.btn a:hover{
+	background-color: #fff;
+	border: 1px solid #000;
+	color: #000;
+}
+
+.color1{
 	background-color: blue;
 	border-radius: 50% 0 0 0;
 }
-.color_2{
+.color2{
 	background-color: red;
 	border-radius: 0 50% 0 0;
 }
 
-.color_3{
+.color3{
 	background-color: yellow;
 	border-radius: 0 0 0 50%;
 }
 
-.color_4{
+.color4{
 	background-color: green;
 	border-radius: 0 0 50%;
 }
