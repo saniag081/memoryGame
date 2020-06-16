@@ -14,8 +14,42 @@ html{
 	height: 150px;
 }
 
-.hidden{
-	display: none;
+.modal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 10px;
+	background-color: #dadada;
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 2rem;
+	position: fixed;
+	top: -100vh;
+	left: 10vw;
+	bottom: 120vh;
+	right: 10vw;
+	z-index: 2;
+	box-shadow: 5px 3px 11px 0px #8d8989;
+	transition: .4s;
+}
+
+.modal.modal--active {
+	top: 15vh;
+	bottom: 15vh;
+}
+
+.logo-exit{
+	max-width: 46px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: .5rem;
+}
+
+.logo-exit img{
+	width: 100%;
 }
 
 .active{
@@ -31,6 +65,7 @@ html{
 
 .container{
 	max-width: 346px;
+	min-width: 315px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;

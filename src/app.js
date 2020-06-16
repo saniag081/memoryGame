@@ -1,5 +1,8 @@
 (function () {
 	const btn = document.querySelector('#btn');
+	const $modalContent = document.querySelector('#modal-content');
+	const $modal = document.querySelector('#modal');
+	const $modalExit = document.querySelector('#exitModal');
 	const container = document.querySelector('#container');
 	const color1 = document.querySelector('#color1');
 	const color2 = document.querySelector('#color2');
@@ -8,6 +11,12 @@
 	let count = [];
 	let countClicks = 0;
 
+	function getTemplateModal({title, description}) {
+		return `
+			<h2>${title}</h2>
+			<p>${description}</p>
+		`
+	}
 	function getElement(numColor) {
 		switch (numColor) {
 			case 1 :
@@ -81,6 +90,11 @@
 			countClicks += 1;
 			console.log(`en juego ${count.length}`);
 		} else {
+			$modalContent.innerHTML = getTemplateModal({
+				title: 'Game over',
+				description: 'vuelve a intentar'
+			});
+			$modal.classList.add('modal--active');
 			count = [];
 			countClicks = 0;
 			console.log(count)
@@ -105,5 +119,9 @@
 			activeColor(elementColor);
 			validateLevel(colorClick)
 		}
+	})
+
+	$modalExit.addEventListener('click', () => {
+		$modal.classList.remove('modal--active');
 	})
 })();
